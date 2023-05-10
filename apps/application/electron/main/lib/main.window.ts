@@ -25,13 +25,13 @@ export class MainWindow extends Window {
     if (this.window.isDestroyed()) {
       this.window.restore();
     }
-    if (process.env.NODE_ENV !== "production") {
+    if (!app.isPackaged) {
       // electron-vite-vue#298
-      this.window.loadURL("http://localhost:3000");
+      this.window.loadURL("http://localhost:5000");
       // Open devTool if the app is not packaged
       //   this.window.webContents.openDevTools();
     } else {
-      this.window.loadFile(join(app.getAppPath(), "main.window/index.html"));
+      this.window.loadFile(join(app.getAppPath(), "/main.window/index.html"));
     }
     this.window.show();
   }

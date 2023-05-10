@@ -1,7 +1,6 @@
 import { app, BrowserWindow, shell, ipcMain } from "electron";
 import { release } from "node:os";
 import { join } from "node:path";
-import { update } from "./update";
 import { MainWindow } from "./lib/main.window";
 import { SetupWindow } from "./lib/setup.window";
 import { GameWindow } from "./lib/game.window";
@@ -43,7 +42,7 @@ const main = async () => {
   const setupWindow = SetupWindow.create();
   const mainWindow = MainWindow.create();
   const gameWindow = GameWindow.create();
-
+  console.log(app.getAppPath())
   setupWindow.start();
 
   ipcMain.on("game/open", (e, data: string) => {

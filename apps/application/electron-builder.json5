@@ -9,7 +9,7 @@
   },
   electronVersion: "23.1.1",
   mac: {
-    artifactName: "${productName}_${version}.${ext}",
+    artifactName: "${productName}_setup.mac.${ext}",
     target: ["dmg", "zip"],
   },
   win: {
@@ -19,7 +19,7 @@
         arch: ["x64"],
       },
     ],
-    artifactName: "${productName}_${version}.${ext}",
+    artifactName: "${productName}_setup.win.${ext}",
   },
   nsis: {
     oneClick: false,
@@ -32,11 +32,11 @@
     "dist",
     {
       from: "../main.window/dist",
-      to: "./main.window",
+      to: "./main.window/",
     },
     {
       from: "../setup.window/dist",
-      to: "./setup.window",
+      to: "./setup.window/",
     },
   ],
 }

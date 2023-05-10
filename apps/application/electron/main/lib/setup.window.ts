@@ -25,13 +25,13 @@ export class SetupWindow extends Window {
   }
 
   public start() {
-    if (process.env.NODE_ENV !== "production") {
+    if (!app.isPackaged) {
       // electron-vite-vue#298
-      this.window.loadURL("http://localhost:3001");
+      this.window.loadURL("http://localhost:5001");
       // Open devTool if the app is not packaged
       //   this.window.webContents.openDevTools();
     } else {
-      this.window.loadFile(join(app.getAppPath(), "setup.window/index.html"));
+      this.window.loadFile(join(app.getAppPath(), "/setup.window/index.html"));
       //   this.window.webContents.executeJavaScript(`window.location = "./setup"`);
     }
     this.window.show();
