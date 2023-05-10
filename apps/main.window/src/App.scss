@@ -1,0 +1,34 @@
+// #root {
+//   max-width: 1280px;
+//   margin: 0 auto;
+//   padding: 2rem;
+//   text-align: center;
+// }
+
+.form_item {
+  margin: .5rem 0;
+}
+
+table,
+td,
+th {
+  // border: 1px solid;
+  text-align: start;
+  padding-left: 0.25rem;
+}
+
+th {
+  background-color: black;
+}
+
+tr:nth-child(even) {
+  background-color: hsla(0, 0%, 23%, 0.397);
+}
+tr:nth-child(odd) {
+  background-color: hsla(0, 0%, 0%, 0.397);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}

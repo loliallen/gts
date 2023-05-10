@@ -1,0 +1,27 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": [
+    "**/.env.*local"
+  ],
+  "globalEnv": [
+    "VSCODE_DEBUG",
+    "DIST_ELECTRON",
+    "DIST",
+    "PUBLIC",
+    "VITE_DEV_SERVER_URL",
+    "NODE_ENV"
+  ],
+  "pipeline": {
+    "build": {
+      "outputs": [
+        ".next/**",
+        "!.next/cache/**"
+      ]
+    },
+    "lint": {},
+    "dev": {
+      "cache": false,
+      "persistent": true
+    }
+  }
+}
