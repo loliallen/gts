@@ -1,7 +1,10 @@
 {
+  "name": "gts",
   "private": true,
+  "version": "1.0.0",
   "scripts": {
     "build": "turbo run build",
+    "build:application": "turbo run build:application",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
@@ -12,7 +15,6 @@
     "prettier": "^2.5.1",
     "turbo": "latest"
   },
-  "name": "gts",
   "packageManager": "npm@8.11.0",
   "workspaces": [
     "apps/*",

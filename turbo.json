@@ -14,14 +14,22 @@
   "pipeline": {
     "build": {
       "outputs": [
-        ".next/**",
-        "!.next/cache/**"
+        "dist"
       ]
     },
     "lint": {},
     "dev": {
       "cache": false,
       "persistent": true
+    },
+    "build:application": {
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "dist",
+        "dist-electron"
+      ]
     }
   }
 }

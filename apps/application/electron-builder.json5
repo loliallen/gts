@@ -7,7 +7,7 @@
   directories: {
     output: "release/${version}",
   },
-  files: ["dist-electron", "dist"],
+  electronVersion: "23.1.1",
   mac: {
     artifactName: "${productName}_${version}.${ext}",
     target: ["dmg", "zip"],
@@ -28,6 +28,8 @@
     deleteAppDataOnUninstall: false,
   },
   files: [
+    "dist-electron",
+    "dist",
     {
       from: "../main.window/dist",
       to: "./main.window",
